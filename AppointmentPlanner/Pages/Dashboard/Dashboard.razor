@@ -66,7 +66,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 dashboard-control">
                     <div class="e-card chart-container">
                         <div class="e-card-content">
-                            <SfChart Height="340px" Width="100%" Title="Consultation">
+                            <SfChart Height="340px" Width="100%" Title="Pregled normi po danima">
                                 <ChartArea><ChartAreaBorder Width="0"></ChartAreaBorder></ChartArea>
                                 <ChartTitleStyle TextAlignment="@Alignment.Near"></ChartTitleStyle>
                                 <ChartPrimaryXAxis Title="Date" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" Interval="1" IntervalType="@IntervalType.Days" LabelFormat="MM/dd" Minimum="@firstDayOfWeek" Maximum="@max" EdgeLabelPlacement="@EdgeLabelPlacement.Shift">
@@ -84,7 +84,10 @@
                                                  Name="ISO_9001" LegendShape="Syncfusion.Blazor.Charts.LegendShape.Circle" Fill="#388CF5">
                                     </ChartSeries>
                                     <ChartSeries DataSource="@chartData2" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Spline" Width="2" XName="Date" YName="EventCount"
-                                                 Name="ISO_14001" LegendShape="Syncfusion.Blazor.Charts.LegendShape.Circle" Fill="#F29438">
+                                                 Name="ISO_45001" LegendShape="Syncfusion.Blazor.Charts.LegendShape.Circle" Fill="#F29438">
+                                    </ChartSeries>
+                                    <ChartSeries DataSource="@chartData3" Type="Syncfusion.Blazor.Charts.ChartSeriesType.Spline" Width="2" XName="Date" YName="EventCount"
+                                                 Name="ISO_14001" LegendShape="Syncfusion.Blazor.Charts.LegendShape.Circle" Fill="#CC10D8">
                                     </ChartSeries>
                                 </ChartSeriesCollection>
                             </SfChart>
@@ -179,6 +182,7 @@ else{
     private List<ChartData> chartData { get; set; }
     private List<ChartData> chartData1 { get; set; }
     private List<ChartData> chartData2 { get; set; }
+    private List<ChartData> chartData3 { get; set; }
     private bool isDataLoaded;
 
 
@@ -229,9 +233,11 @@ else{
         List<Hospital> diabetologyData = currentViewEvents.Where(item => item.DepartmentId == 5).ToList();
         List<Hospital> orthopaedicsData = currentViewEvents.Where(item => item.DepartmentId == 4).ToList();
         List<Hospital> cardiologyData = currentViewEvents.Where(item => item.DepartmentId == 6).ToList();
+        List<Hospital>iso14001Data = currentViewEvents.Where(item => item.DepartmentId == 3).ToList();
         chartData = Service.GetAllChartPoints(diabetologyData, firstDayOfWeek);
         chartData1 = Service.GetAllChartPoints(orthopaedicsData, firstDayOfWeek);
         chartData2 = Service.GetAllChartPoints(cardiologyData, firstDayOfWeek);
+        chartData3 = Service.GetAllChartPoints(iso14001Data, firstDayOfWeek);
         await Task.Delay(500);
         isDataLoaded = true;
         StateHasChanged();

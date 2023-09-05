@@ -44,19 +44,18 @@ namespace AppointmentPlanner.Models
             List<Hospital> data = new List<Hospital>
             {
                 //
-                new Hospital(1000, "ZAGREB DATA", new DateTime(2020, 2, 5, 8, 30, 0), new DateTime(2020, 2, 5, 13, 30, 0), "Bone Fracture", "ISO_50001", 4, 5, 2, "1. nadzorni audit ISO 50001"),
+                new Hospital(1000, "ZAGREB DATA", new DateTime(2020, 2, 5, 8, 30, 0), new DateTime(2020, 2, 5, 13, 30, 0), "Bone Fracture", "ISO_50001", 4, 7, 2, "1. nadzorni audit ISO 27001"),
                 
-                new Hospital(1001, "Poduzetnik d.o.o.", new DateTime(2020, 2, 3, 11, 0, 0), new DateTime(2020, 2, 3, 12, 0, 0), "Biological Problems", "GENERAL", 1, 3, 4, "Physical aches or pain, Memory difficulties or personality changes"),
+                //new Hospital(1001, "Poduzetnik d.o.o.", new DateTime(2020, 2, 5, 11, 0, 0), new DateTime(2020, 2, 5, 16, 0, 0), "Biological Problems", "GENERAL", 1, 3, 4, "Physical aches or pain, Memory difficulties or personality changes"),
                 
                 //
-                new Hospital(1002, "VSITE", new DateTime(2020, 2, 5, 9, 0, 0), new DateTime(2020, 2, 5, 16, 0, 0), "Skin Problem", "ISO_9001", 3, 4, 5, "predaudit ISO 45001"),
+                new Hospital(1002, "VSITE", new DateTime(2020, 2, 5, 9, 0, 0), new DateTime(2020, 2, 5, 16, 0, 0), "Skin Problem", "ISO_9001", 3, 3, 5, "predaudit ISO 45001"),
                 
                 new Hospital(1003, "Aircash", new DateTime(2020, 2, 9, 10, 0, 0), new DateTime(2020, 2, 9, 11, 0, 0), "Feeling very hungry - even though you are eating", "ISO_27001", 5, 6, 1, "Urinating often, Extreme fatigue, Blurry vision"),
                 new Hospital(1004, "Kupi prodaj d.o.o.", new DateTime(2020, 2, 7, 10, 0, 0), new DateTime(2020, 2, 7, 11, 0, 0), "Skin care treatment", "DERMATOLOGIST", 3, 4, 2, "Scaly or rough skin, Peeling skin, open sores or lesions"),
                 new Hospital(1005, "VESTIGO", new DateTime(2020, 2, 7, 13, 30, 0), new DateTime(2020, 2, 7, 14, 0, 0), "General Checkup", "GENERAL", 1, 1, 3, "Decreased energy, Chronic fatigue, Difficulty concentrating"),
                 new Hospital(1006, "Kupi prodaj d.o.o.", new DateTime(2020, 2, 7, 16, 0, 0), new DateTime(2020, 2, 7, 17, 0, 0), "Left Arm Fracture", "ISO_50001", 4, 5, 6, "Swelling, warmth, or redness in the joint"),
                 new Hospital(1007, "VESTIGO", new DateTime(2020, 2, 13, 11, 0, 0), new DateTime(2020, 2, 13, 11, 30, 0), "Chest Pain", "CARDIOLOGY", 6, 7, 2, "Shortness of breath, Swollen feet or ankles"),
-                new Hospital(1008, "ZAGREB DATA", new DateTime(2020, 2, 13, 9, 0, 0), new DateTime(2020, 2, 13, 10, 0, 0), "Skin Care Treatment", "DERMATOLOGIST", 3, 4, 2, "a rash, which might be painful or itchy"),
                 new Hospital(1009, "VESTIGO", new DateTime(2020, 2, 10, 14, 0, 0), new DateTime(2020, 2, 10, 16, 0, 0), "Surgery Treatment", "GENERAL", 1, 1, 3, "Pain at Site, Swelling/Hardening"),
                 new Hospital(1010, "AdaVESTIGOms", new DateTime(2020, 2, 11, 11, 0, 0), new DateTime(2020, 2, 11, 13, 0, 0), "Bone Problem", "ISO_50001", 4, 5, 3, "Recurring or constant joint pain or tenderness"),
                 new Hospital(1011, "VESTIGO", new DateTime(2020, 2, 1, 11, 0, 0), new DateTime(2020, 2, 1, 12, 0, 0), "General Checkup", "GENERAL", 1, 3, 1, "a pulsating feeling in the head, sensitivity to sound and light"),
@@ -64,20 +63,14 @@ namespace AppointmentPlanner.Models
                 new Hospital(1013, "Aircash", new DateTime(2020, 2, 8, 13, 0, 0), new DateTime(2020, 2, 8, 14, 0, 0), "Health Checkup", "GENERAL", 1, 1, 1, "Sweating, Chills and Shivering"),
                 new Hospital(1014, "VESTIGO", new DateTime(2020, 2, 6, 16, 0, 0), new DateTime(2020, 2, 6, 17, 0, 0), "Eye and Spectacles Checkup", "GENERAL", 1, 3, 3, "recertifikacija ISO 9001"),
                 new Hospital(1015, "AGILUS TEL", new DateTime(2020, 2, 6, 12, 0, 0), new DateTime(2020, 2, 6, 13, 0, 0), "Feeling very hungry - even though you are eating", "ISO_27001", 5, 6, 2, "Urinating often, Extreme fatigue, Blurry vision"),
-                //
-                new Hospital(1016, "VESTIGO", new DateTime(2020, 2, 5, 12, 0, 0), new DateTime(2020, 2, 5, 18, 30, 0), "Kidney disease", "ISO_27001", 5, 6, 3, "1. nadzorni audit ISO 14001"),
-                new Hospital(1017, "Poduzetnik d.o.o.", new DateTime(2020, 2, 4, 14, 0, 0), new DateTime(2020, 2, 4, 14, 30, 0), "Gastroparesis", "ISO_27001", 5, 6, 4, "A feeling of fullness after eating just a few bites"),
+                new Hospital(1017, "Poduzetnik d.o.o.", new DateTime(2020, 2, 4, 14, 0, 0), new DateTime(2020, 2, 4, 18, 30, 0), "Gastroparesis", "ISO_27001", 5, 6, 4, "A feeling of fullness after eating just a few bites"),
                 new Hospital(1018, "Aircash", new DateTime(2020, 2, 7, 12, 0, 0), new DateTime(2020, 2, 7, 13, 0, 0), "Sleep apnea", "ISO_27001", 5, 6, 1, "2. nadzorni audit ISO 14001"),
                 new Hospital(1019, "ZAGREB DATA", new DateTime(2020, 2, 4, 10, 0, 0), new DateTime(2020, 2, 4, 11, 0, 0), "Vision problems", "ISO_27001", 5, 6, 2, "ISO 27001"),
                 new Hospital(1020, "ZAGREB DATA", new DateTime(2020, 2, 2, 12, 0, 0), new DateTime(2020, 2, 2, 13, 0, 0), "Feeling very hungry - even though you are eating", "ISO_27001", 5, 6, 2, "Urinating often, Extreme fatigue, Blurry vision"),
                 new Hospital(1021, "VESTIGO", new DateTime(2020, 2, 6, 10, 0, 0), new DateTime(2020, 2, 6, 11, 0, 0), "Bone Fracture", "ISO_50001", 4, 5, 3, "1. nadzorni audit ISO 50001"),
                 new Hospital(1022, "VSITE", new DateTime(2020, 2, 2, 15, 0, 0), new DateTime(2020, 2, 2, 15, 30, 0), "Left Arm Fracture", "ISO_50001", 4, 5, 5, "Deformity, such as a bent arm or wrist"),
                 new Hospital(1023, "ZAGREB DATA", new DateTime(2020, 2, 3, 14, 0, 0), new DateTime(2020, 2, 3, 14, 30, 0), "Rapid heartbeat", "CARDIOLOGY", 6, 7, 2, "Fluttering sensation in the chest"),
-                new Hospital(1024, "VESTIGO", new DateTime(2020, 2, 4, 17, 30, 0), new DateTime(2020, 2, 4, 18, 30, 0), "Lightheadedness", "CARDIOLOGY", 6, 7, 3, "Sudden drop in blood pressure"),
-                new Hospital(1025, "Poduzetnik d.o.o.", new DateTime(2020, 2, 4, 15, 0, 0), new DateTime(2020, 2, 4, 15, 30, 0), "Shortness of breath", "CARDIOLOGY", 6, 7, 4, "Nasal congestion, runny nose, itchy or watery eyes"),
-
                 new Hospital(1026, "AGILUS TEL", new DateTime(2020, 2, 3, 17, 0, 0), new DateTime(2020, 2, 3, 18, 30, 0), "Chest pain or discomfort", "CARDIOLOGY", 6, 7, 2, "Fast heart beat, and trouble breathing"),
-                new Hospital(1027, "AGILUS TEL", new DateTime(2020, 2, 6, 15, 30, 0), new DateTime(2020, 2, 6, 16, 0, 0), "Racing heartbeat", "CARDIOLOGY", 6, 7, 2, "A fluttering in your chest"),
                 new Hospital(1028, "ZAGREB DATA", new DateTime(2020, 2, 3, 14, 0, 0), new DateTime(2020, 2, 3, 14, 30, 0), "Heart Problem", "CARDIOLOGY", 6, 7, 2, "Fluid buildup from being overweight"),
             };
             return data;
@@ -102,7 +95,7 @@ namespace AppointmentPlanner.Models
         public string DepartmentName { get; set; }
         [Required]
         public string BloodGroup { get; set; } = "AB +ve";
-        public string Gender { get; set; } = "Male";
+        public string Gender { get; set; } = "d.o.o.";
         public string Symptoms { get; set; }
         public Patient()
         {
@@ -129,12 +122,12 @@ namespace AppointmentPlanner.Models
         {
             List<Patient> data = new List<Patient>
             {
-                new Patient(1, "Aircash", "Aircash", new DateTime(1980, 8, 3), "(071) 555-4444", "laura90@mail.com", "507 - 20th Ave. E.Apt. 2A", "Eye Checkup", "GENERAL", "O +ve", "Female", "Sweating, Chills and Shivering"),
-                new Patient(2, "ZAGREB DATA", "ZAGREB DATA", new DateTime(2000, 3, 5), "(071) 555-4445", "milka40@sample.com", "908 W. Capital Way", "Bone Fracture", "ISO_50001", "AB +ve", "Female", "2. nadzorni audit ISO 27001"),
-                new Patient(3, "VESTIGO", "VESTIGO", new DateTime(1985, 2, 3), "(071) 555-4454", "adams89@rpy.com", "722 Moss Bay Blvd.", "Eye and Spectactles", "GENERAL", "B +ve", "Male", "recertifikacija ISO 9001"),
-                new Patient(4, "Poduzetnik d.o.o.", "Poduzetnik d.o.o.", new DateTime(2000, 7, 3), "(071) 555-4544", "janet79@rpy.com", "4110 Old Redmond Rd.", "Biological Problem", "GENERAL", "B +ve", "Male", "Physical aches or pain, Memory difficulties or personality change"),
-                new Patient(5, "VSITE", "VSITE", new DateTime(2005, 4, 29), "(071) 555-5444", "mercy60@sample.com", "14 Garrett Hill", "Skin Hives", "ISO_9001", "AB  -ve", "Female", "outbreak of swollen, pale red bumps or plaques"),
-                new Patient(6, "Kupi prodaj d.o.o.", "Kupi prodaj d.o.o.", new DateTime(1989, 10, 29), "(206) 555-4444", "richa46@mail.com", "Coventry House\r\nMiner Rd.", "Arm Fracture", "ISO_50001", "B +ve", "Female", "Swelling, warmth, or redness in the joint")
+                new Patient(1, "Aircash", "Aircash", new DateTime(1980, 8, 3), "(071) 555-4444", "laura90@mail.com", "507 - 20th Ave. E.Apt. 2A", "Eye Checkup", "GENERAL", "Digitalni novac", "d.d.", "Sweating, Chills and Shivering"),
+                new Patient(2, "ZAGREB DATA", "ZAGREB DATA", new DateTime(2000, 3, 5), "(071) 555-4445", "milka40@sample.com", "908 W. Capital Way", "Bone Fracture", "ISO_50001", "Informatičke usluge", "d.d.", "2. nadzorni audit ISO 27001"),
+                new Patient(3, "VESTIGO", "VESTIGO", new DateTime(1985, 2, 3), "(071) 555-4454", "adams89@rpy.com", "722 Moss Bay Blvd.", "Eye and Spectactles", "GENERAL", "Informatička rješenja", "d.o.o.", "recertifikacija ISO 9001"),
+                new Patient(4, "Poduzetnik d.o.o.", "Poduzetnik d.o.o.", new DateTime(2000, 7, 3), "(071) 555-4544", "janet79@rpy.com", "4110 Old Redmond Rd.", "Biological Problem", "GENERAL", "Import/export", "d.o.o.", "Physical aches or pain, Memory difficulties or personality change"),
+                new Patient(5, "VSITE", "VSITE", new DateTime(2005, 4, 29), "(071) 555-5444", "mercy60@sample.com", "14 Garrett Hill", "Skin Hives", "ISO_9001", "Visoka škola", "d.d.", "outbreak of swollen, pale red bumps or plaques"),
+                new Patient(6, "Kupi prodaj d.o.o.", "Kupi prodaj d.o.o.", new DateTime(1989, 10, 29), "(206) 555-4444", "richa46@mail.com", "Coventry House\r\nMiner Rd.", "Arm Fracture", "ISO_50001", "Sve što reba", "d.d.", "Swelling, warmth, or redness in the joint")
               
             };
             return data;
@@ -166,7 +159,7 @@ namespace AppointmentPlanner.Models
     {
         [Required(ErrorMessage = "Enter a valid name.")]
         public string Name { get; set; }
-        public string Gender { get; set; } = "Male";
+        public string Gender { get; set; } = "d.o.o.";
         public string Text { get; set; }
         public int Id { get; set; }
         public int DepartmentId { get; set; } = 1;
@@ -491,8 +484,8 @@ namespace AppointmentPlanner.Models
         {
             List<TextValueData> data = new List<TextValueData>
             {
-                new TextValueData("Departments", "Department Colors"),
-                new TextValueData("Doctors", "Doctors Colors")
+                new TextValueData("Odjeli", "Boje po odjelima Colors"),
+                new TextValueData("Auditori", "Boje prema auditorima")
             };
             return data;
         }
@@ -500,14 +493,14 @@ namespace AppointmentPlanner.Models
         {
             List<TextValueData> data = new List<TextValueData>
             {
-                new TextValueData("AB +ve", "AB +ve"),
-                new TextValueData("A +ve", "A +ve"),
-                new TextValueData("B +ve", "B +ve"),
-                new TextValueData("O +ve", "O +ve"),
-                new TextValueData("AB -ve", "AB -ve"),
-                new TextValueData("A -ve", "A -ve"),
-                new TextValueData("B -ve", "B -ve"),
-                new TextValueData("O -ve", "O -ve")
+                new TextValueData("Informatika", "Informatika"),
+                new TextValueData("Bankarstvo", "Bankarstvo"),
+                new TextValueData("Odvjetničko društvo", "Odvjetničko društvo"),
+                new TextValueData("Autoprijevoznik", "Autoprijevoznik"),
+                new TextValueData("Inženjering", "Inženjering"),
+                new TextValueData("Proizvodnja sladoleda", "Proizvodnja sladoleda"),
+                new TextValueData("Neka nova djelatnost", "Neka nova djelatnost"),
+                new TextValueData("Zbrinjavanje otpada", "Zbrinjavanje otpada")
             };
             return data;
         }

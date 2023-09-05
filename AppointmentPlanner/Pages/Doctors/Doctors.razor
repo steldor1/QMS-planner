@@ -22,7 +22,7 @@
     </header>
     <div class="specialization-detail-wrapper">
         <div class="specialization-types">
-            <SfDropDownList @ref="specObj" TItem="Specialization" TValue="string" Width="200px" ShowClearButton="true" DataSource="@specializationData" Placeholder="Select a Specialization" PopupHeight="230px">
+            <SfDropDownList @ref="specObj" TItem="Specialization" TValue="string" Width="200px" ShowClearButton="true" DataSource="@specializationData" Placeholder="Odaberi primarnu normu" PopupHeight="230px">
                 <DropDownListEvents TItem="Specialization" TValue="string" ValueChange="@onSpecializationChange"></DropDownListEvents>
                 <DropDownListFieldSettings Text="Text" Value="Id"></DropDownListFieldSettings>
                 <DropDownListTemplates TItem="Specialization">
@@ -40,7 +40,7 @@
                     </ValueTemplate>
                 </DropDownListTemplates>
             </SfDropDownList>
-            <SfButton CssClass="e-normal" @onclick="@onAddDoctor" IsPrimary="true">Add New Doctor</SfButton>
+            <SfButton CssClass="e-normal" @onclick="@onAddDoctor" IsPrimary="true">Dodaj novog auditora</SfButton>
         </div>
         <div class="specialist-display">
             @foreach (var data in filteredDoctors)

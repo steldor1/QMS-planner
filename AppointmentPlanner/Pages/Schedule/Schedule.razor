@@ -54,7 +54,7 @@
         <div class="col-lg-3 col-md-3 col-sm-3 treeview-container-wrapper">
             <div class="treeview-container">
                 <div>
-                    <SfDropDownList @ref="ddlObj" Placeholder="Choose Specialist" Width="220px" TItem="Doctor" PopupHeight="auto" DataSource="@resourceDataSource" TValue="int?" CssClass="planner-dropdown" ShowClearButton="true">
+                    <SfDropDownList @ref="ddlObj" Placeholder="Odaberi auditora" Width="220px" TItem="Doctor" PopupHeight="auto" DataSource="@resourceDataSource" TValue="int?" CssClass="planner-dropdown" ShowClearButton="true">
                         <DropDownListEvents TItem="Doctor" TValue="int?" ValueChange="onValueChange"></DropDownListEvents>
                         <DropDownListFieldSettings Text="Name" Value="Id"></DropDownListFieldSettings>
                         <DropDownListTemplates TItem="Doctor">
@@ -78,7 +78,7 @@
                     </SfDropDownList>
                 </div>
                 <div class="title-container">
-                    <h2 class="title-text">Waiting List</h2>
+                    <h2 class="title-text">Lista planiranih audita</h2>
                 </div>
             <SfTreeView TValue="WaitingList" LoadOnDemand="false" CssClass="treeview-external-drag" AllowDragAndDrop="true">
                 <TreeViewFieldsSettings Id="Id" Text="Name" DataSource="@waitingList"></TreeViewFieldsSettings>

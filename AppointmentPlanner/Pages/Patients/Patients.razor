@@ -49,9 +49,9 @@
                             <span class="patient-name" @onclick="@(e => onPatientClick(e, (context as Patient).Id))">@((context as Patient).Name)</span>
                         </Template>
                     </GridColumn>
-                    <GridColumn Field=@nameof(Patient.Gender) HeaderText="Gender" TextAlign="@TextAlign.Left" Width="80"></GridColumn>
-                    <GridColumn Field=@nameof(Patient.BloodGroup) HeaderText="Blood Group" TextAlign="@TextAlign.Left" Width="100"></GridColumn>
-                    <GridColumn Field=@nameof(Patient.Symptoms) HeaderText="Symptoms" TextAlign="@TextAlign.Left" Width="150"></GridColumn>
+                    <GridColumn Field=@nameof(Patient.Gender) HeaderText="Tip društva" TextAlign="@TextAlign.Left" Width="80"></GridColumn>
+                    <GridColumn Field=@nameof(Patient.BloodGroup) HeaderText="Djelatnost" TextAlign="@TextAlign.Left" Width="100"></GridColumn>
+                    <GridColumn Field=@nameof(Patient.Symptoms) HeaderText="Osnovni podaci" TextAlign="@TextAlign.Left" Width="150"></GridColumn>
                     <GridColumn Field=@nameof(Patient.Mobile) HeaderText="Mobile Number" TextAlign="@TextAlign.Left" Width="100"></GridColumn>
                     <GridColumn Field=@nameof(Patient.Email) HeaderText="Email" TextAlign="@TextAlign.Left" Width="120"></GridColumn>
                 </GridColumns>
@@ -127,8 +127,8 @@
                 <div class="gender">
                     <div><label>Gender</label></div>
                     <div class="e-btn-group e-round-corner e-field">
-                        <SfRadioButton Label="Male" Name="Gender" Value="Male" @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
-                        <SfRadioButton Label="Female" Name="Gender" Value="Female" @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
+                        <SfRadioButton Label="d.o.o." Name="Gender" Value="d.o.o." @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
+                        <SfRadioButton Label="d.d." Name="Gender" Value="d.d." @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
                     </div>
                 </div>
                 <div class="dob">
@@ -238,7 +238,7 @@ else
     private void onAddPatient(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
         saveButton = "Save";
-        patientEditModel = new Patient { Name = null, Gender = "Male", DOB= new DateTime(1996, 1, 31), BloodGroup = "B +ve", Mobile = null, Email = null, Symptoms = null };
+        patientEditModel = new Patient { Name = null, Gender = "d.o.o.", DOB= new DateTime(1996, 1, 31), BloodGroup = "B +ve", Mobile = null, Email = null, Symptoms = null };
         this.patientHeader = "New Patient";
         this.IsShowPatientEditDialog = true;
     }
