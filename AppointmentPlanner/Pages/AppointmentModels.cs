@@ -60,7 +60,7 @@ namespace AppointmentPlanner.Models
                 new Hospital(1010, "AdaVESTIGOms", new DateTime(2020, 2, 11, 11, 0, 0), new DateTime(2020, 2, 11, 13, 0, 0), "Bone Problem", "ISO_50001", 4, 5, 3, "Recurring or constant joint pain or tenderness"),
                 new Hospital(1011, "VESTIGO", new DateTime(2020, 2, 1, 11, 0, 0), new DateTime(2020, 2, 1, 12, 0, 0), "General Checkup", "GENERAL", 1, 3, 1, "a pulsating feeling in the head, sensitivity to sound and light"),
                 new Hospital(1012, "Poduzetnik d.o.o.", new DateTime(2020, 2, 1, 16, 0, 0), new DateTime(2020, 2, 1, 17, 0, 0), "Complete loss of sensation", "ISO_14001", 2, 2, 4, "Partial or complete paralysis, Muscle weakness"),
-                new Hospital(1013, "Aircash", new DateTime(2020, 2, 8, 13, 0, 0), new DateTime(2020, 2, 8, 14, 0, 0), "Health Checkup", "GENERAL", 1, 1, 1, "Sweating, Chills and Shivering"),
+                new Hospital(1013, "Aircash", new DateTime(2020, 2, 8, 13, 0, 0), new DateTime(2020, 2, 8, 14, 0, 0), "Health Checkup", "GENERAL", 1, 1, 1, "Digitalni novčanik, kreditna kartica ..."),
                 new Hospital(1014, "VESTIGO", new DateTime(2020, 2, 6, 16, 0, 0), new DateTime(2020, 2, 6, 17, 0, 0), "Eye and Spectacles Checkup", "GENERAL", 1, 3, 3, "recertifikacija ISO 9001"),
                 new Hospital(1015, "AGILUS TEL", new DateTime(2020, 2, 6, 12, 0, 0), new DateTime(2020, 2, 6, 13, 0, 0), "Feeling very hungry - even though you are eating", "ISO_27001", 5, 6, 2, "Urinating often, Extreme fatigue, Blurry vision"),
                 new Hospital(1017, "Poduzetnik d.o.o.", new DateTime(2020, 2, 4, 14, 0, 0), new DateTime(2020, 2, 4, 18, 30, 0), "Gastroparesis", "ISO_27001", 5, 6, 4, "A feeling of fullness after eating just a few bites"),
@@ -122,12 +122,12 @@ namespace AppointmentPlanner.Models
         {
             List<Patient> data = new List<Patient>
             {
-                new Patient(1, "Aircash", "Aircash", new DateTime(1980, 8, 3), "(071) 555-4444", "laura90@mail.com", "507 - 20th Ave. E.Apt. 2A", "Eye Checkup", "GENERAL", "Digitalni novac", "d.d.", "Sweating, Chills and Shivering"),
+                new Patient(1, "Aircash", "Aircash", new DateTime(1980, 8, 3), "(071) 555-4444", "laura90@mail.com", "507 - 20th Ave. E.Apt. 2A", "Eye Checkup", "GENERAL", "Digitalni novac", "d.d.", "Digitalni novčanik, Mastercard kartica"),
                 new Patient(2, "ZAGREB DATA", "ZAGREB DATA", new DateTime(2000, 3, 5), "(071) 555-4445", "milka40@sample.com", "908 W. Capital Way", "Bone Fracture", "ISO_50001", "Informatičke usluge", "d.d.", "2. nadzorni audit ISO 27001"),
                 new Patient(3, "VESTIGO", "VESTIGO", new DateTime(1985, 2, 3), "(071) 555-4454", "adams89@rpy.com", "722 Moss Bay Blvd.", "Eye and Spectactles", "GENERAL", "Informatička rješenja", "d.o.o.", "recertifikacija ISO 9001"),
-                new Patient(4, "Poduzetnik d.o.o.", "Poduzetnik d.o.o.", new DateTime(2000, 7, 3), "(071) 555-4544", "janet79@rpy.com", "4110 Old Redmond Rd.", "Biological Problem", "GENERAL", "Import/export", "d.o.o.", "Physical aches or pain, Memory difficulties or personality change"),
-                new Patient(5, "VSITE", "VSITE", new DateTime(2005, 4, 29), "(071) 555-5444", "mercy60@sample.com", "14 Garrett Hill", "Skin Hives", "ISO_9001", "Visoka škola", "d.d.", "outbreak of swollen, pale red bumps or plaques"),
-                new Patient(6, "Kupi prodaj d.o.o.", "Kupi prodaj d.o.o.", new DateTime(1989, 10, 29), "(206) 555-4444", "richa46@mail.com", "Coventry House\r\nMiner Rd.", "Arm Fracture", "ISO_50001", "Sve što reba", "d.d.", "Swelling, warmth, or redness in the joint")
+                new Patient(4, "Poduzetnik d.o.o.", "Poduzetnik d.o.o.", new DateTime(2000, 7, 3), "(071) 555-4544", "janet79@rpy.com", "4110 Old Redmond Rd.", "Biological Problem", "GENERAL", "Import/export", "d.o.o.", "Uvozim, izvozim, održavam, sve šta triba ..."),
+                new Patient(5, "VSITE", "VSITE", new DateTime(2005, 4, 29), "(071) 555-5444", "mercy60@sample.com", "14 Garrett Hill", "Skin Hives", "ISO_9001", "Visoka škola", "d.d.", "Visoka škola za informacijske tehnologije"),
+                new Patient(6, "Kupi prodaj d.o.o.", "Kupi prodaj d.o.o.", new DateTime(1989, 10, 29), "(206) 555-4444", "richa46@mail.com", "Coventry House\r\nMiner Rd.", "Arm Fracture", "ISO_50001", "Znam sve, imam sve!", "d.d.", "ako nemam, nabavim brzo ...")
               
             };
             return data;
