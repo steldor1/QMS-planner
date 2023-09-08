@@ -26,15 +26,14 @@
             <div id="searchTemplate" class="search-wrapper planner-patient-search">
                 <div class="e-input-group patient-search" role="search">
                     <input id="schedule_searchbar" class="e-input" name="input" type="text" @bind-value="@searchValue"
-                           placeholder="Search Patient" @oninput="@patientSearch" />
+                           placeholder="Pretraga klijenta" @oninput="@patientSearch" />
                     <span class="e-clear-icon" aria-label="close" role="button" @onclick="clearText"></span>
                     <span id="schedule_searchbutton" class="e-input-group-icon search-icon e-icons" tabindex="-1"
                           title="Search" aria-label="search"></span>
                 </div>
             </div>
            <SfButton CssClass="e-normal add-details" @onclick="@onAddPatient" IsPrimary="true">
-                Add
-                New Patient
+                Dodaj novog klijenta
             </SfButton>
         </div>
         <div class="patient-display">
@@ -239,7 +238,7 @@ else
     {
         saveButton = "Save";
         patientEditModel = new Patient { Name = null, Gender = "d.o.o.", DOB= new DateTime(1996, 1, 31), BloodGroup = "B +ve", Mobile = null, Email = null, Symptoms = null };
-        this.patientHeader = "New Patient";
+        this.patientHeader = "Novi klijent";
         this.IsShowPatientEditDialog = true;
     }
     private async Task onCancelClick(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
@@ -258,14 +257,14 @@ else
             await gridObj.AddRecord(getRecord, Service.Patients.Count());
             filteredPatients = Service.Patients;
             message = " " + getRecord.Name + " for " + getRecord.Symptoms;
-            name = "Added New Patient";
+            name = "Dodan je novi klijent";
         }
         else
         {
             getRecord = new Patient(activePatientData.Id, patientEditModel.Name, patientEditModel.Name, patientEditModel.DOB, mobileNo, patientEditModel.Email, activePatientData.Address, activePatientData.Disease, activePatientData.DepartmentName, patientEditModel.BloodGroup, patientEditModel.Gender, patientEditModel.Symptoms);
             await gridObj.UpdateRow((activePatientData.Id - 1), getRecord);
             message = " " + getRecord.Name + " for " + getRecord.Symptoms;
-            name = "Updated Patient";
+            name = "Klijent ažuriran";
         }
         Service.Activities.Insert(0, new Activity { Name = name, Message = message, Time = "10 mins ago", Type = "patient", ActivityTime = DateTime.Now });
         await this.dialogObj.Hide();
@@ -309,7 +308,7 @@ else
     {
         showGridEditDialog = false;
         patientEditModel = new Patient { Name = activePatientData.Name, Gender = activePatientData.Gender, Mobile = activePatientData.Mobile, Email = activePatientData.Email, Symptoms = activePatientData.Symptoms, BloodGroup = activePatientData.BloodGroup, DOB = activePatientData.DOB };
-        this.patientHeader = "Edit Patient";
+        this.patientHeader = "Izmjena klijenta";
         this.IsShowPatientEditDialog = true;
     }
 
