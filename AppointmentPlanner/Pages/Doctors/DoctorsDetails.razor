@@ -83,12 +83,12 @@
                 <div class="gender">
                     <div><label>Gender</label></div>
                     <div class='e-btn-group e-round-corner e-field'>
-                        <SfRadioButton Label="d.o.o." Name="Gender" Value="d.o.o." @bind-Checked="@doctorEditModel.Gender"></SfRadioButton>
-                        <SfRadioButton Label="d.d." Name="Gender" Value="d.d." @bind-Checked="@doctorEditModel.Gender"></SfRadioButton>
+                        <SfRadioButton Label="d.o.o." Name="Spol" Value="d.o.o." @bind-Checked="@doctorEditModel.Gender"></SfRadioButton>
+                        <SfRadioButton Label="d.d." Name="Spol" Value="d.d." @bind-Checked="@doctorEditModel.Gender"></SfRadioButton>
                     </div>
                 </div>
                 <div class="mobile" style="width:345px">
-                    <SfMaskedTextBox CssClass="e-field" @ref="maskObj" Placeholder="Mobile Number" FloatLabelType="@FloatLabelType.Always" Mask="(999) 999-9999" @bind-Value="@doctorEditModel.Mobile"></SfMaskedTextBox>
+                    <SfMaskedTextBox CssClass="e-field" @ref="maskObj" Placeholder="Mobilni broj" FloatLabelType="@FloatLabelType.Always" Mask="(999) 999-9999" @bind-Value="@doctorEditModel.Mobile"></SfMaskedTextBox>
                     <ValidationMessage For="@(() => doctorEditModel.Mobile)" />
                 </div>
             </div>
@@ -98,17 +98,17 @@
             </div>
             <div class="education-container">
                 <div class="department">
-                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" Placeholder="Department" Width="160px" DataSource="@specializationData" @bind-Value="@doctorEditModel.DepartmentId">
+                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" Placeholder="Norma" Width="160px" DataSource="@specializationData" @bind-Value="@doctorEditModel.DepartmentId">
                         <DropDownListFieldSettings Text="Text" Value="DepartmentId"></DropDownListFieldSettings>
                     </SfDropDownList>
                 </div>
                 <div class="education" style="width:345px">
-                    <SfTextBox CssClass='e-field' Placeholder='Education' FloatLabelType="@FloatLabelType.Always" @bind-Value="@doctorEditModel.Education"></SfTextBox>
+                    <SfTextBox CssClass='e-field' Placeholder='Edukacija' FloatLabelType="@FloatLabelType.Always" @bind-Value="@doctorEditModel.Education"></SfTextBox>
                 </div>
             </div>
             <div class="experience-container">
                 <div class="experience">
-                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" Placeholder="Experience" Width="160px" @bind-Value="@doctorEditModel.Experience" DataSource="@experienceData">
+                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" Placeholder="Iskustvo" Width="160px" @bind-Value="@doctorEditModel.Experience" DataSource="@experienceData">
                         <DropDownListFieldSettings Text="Text" Value="Id"></DropDownListFieldSettings>
                     </SfDropDownList>
                 </div>

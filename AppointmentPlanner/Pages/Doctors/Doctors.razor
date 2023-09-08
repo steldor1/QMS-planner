@@ -7,7 +7,7 @@
 
 @if(isDataLoaded){
 <div class="deleted-msg">
-    <SfMessage Severity="MessageSeverity.Success" Visible=@Service.ShowDeleteMsg>The Doctor's details have been deleted successfully.</SfMessage>
+    <SfMessage Severity="MessageSeverity.Success" Visible=@Service.ShowDeleteMsg>Detalji auditora su obrisani iz sustava.</SfMessage>
 </div>
 <div id="doctors" class="doctors-wrapper">
     <header>
@@ -89,15 +89,15 @@
                 <ValidationMessage For="@(() => doctorEditModel.Name)" />
             </div>
             <div class="gender-container">
-                <div class="gender">
-                    <div><label>Gender</label></div>
+                <div class="Spol">
+                    <div><label>Spol</label></div>
                     <div class="e-btn-group e-round-corner e-field">
-                        <SfRadioButton Label="Male" Name="Gender" Value="Male" @bind-Checked="@doctorEditModel.Gender"></SfRadioButton>
-                        <SfRadioButton Label="Female" Name="Gender" Value="Female" @bind-Checked="@doctorEditModel.Gender"></SfRadioButton>
+                        <SfRadioButton Label="Muški" Name="Gender" Value="Muški" @bind-Checked="@doctorEditModel.Gender"></SfRadioButton>
+                        <SfRadioButton Label="Ženski" Name="Gender" Value="Ženski" @bind-Checked="@doctorEditModel.Gender"></SfRadioButton>
                     </div>
                 </div>
                 <div class="mobile" style="width:345px">
-                    <SfMaskedTextBox CssClass="e-field" @ref="maskObj" Placeholder="Mobile Number" FloatLabelType="@FloatLabelType.Always" Mask="(999) 999-9999" @bind-Value="@doctorEditModel.Mobile"></SfMaskedTextBox>
+                    <SfMaskedTextBox CssClass="e-field" @ref="maskObj" Placeholder="Mobilni broj" FloatLabelType="@FloatLabelType.Always" Mask="(999) 999-9999" @bind-Value="@doctorEditModel.Mobile"></SfMaskedTextBox>
                     <ValidationMessage For="@(() => doctorEditModel.Mobile)" />
                 </div>
             </div>
@@ -107,17 +107,17 @@
             </div>
             <div class="education-container">
                 <div class="department">
-                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" Placeholder="Department" Width="160px" DataSource="@specializationData" @bind-Value="@doctorEditModel.DepartmentId">
+                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" Placeholder="ISO norma" Width="160px" DataSource="@specializationData" @bind-Value="@doctorEditModel.DepartmentId">
                         <DropDownListFieldSettings Text="Text" Value="DepartmentId"></DropDownListFieldSettings>
                     </SfDropDownList>
                 </div>
                 <div class="education" style="width:345px">
-                    <SfTextBox CssClass="e-field" Placeholder="Education" FloatLabelType="@FloatLabelType.Always" @bind-Value="@doctorEditModel.Education"></SfTextBox>
+                    <SfTextBox CssClass="e-field" Placeholder="Edukacija" FloatLabelType="@FloatLabelType.Always" @bind-Value="@doctorEditModel.Education"></SfTextBox>
                 </div>
             </div>
             <div class="experience-container">
                 <div class="experience">
-                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" Placeholder="Experience" Width="160px" @bind-Value="@doctorEditModel.Experience" DataSource="@experienceData">
+                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" Placeholder="Iskustvo" Width="160px" @bind-Value="@doctorEditModel.Experience" DataSource="@experienceData">
                         <DropDownListFieldSettings Text="Text" Value="Id"></DropDownListFieldSettings>
                     </SfDropDownList>
                 </div>
@@ -210,7 +210,7 @@ else
 
     private bool isShowNewDialog { get; set; } = false;
 
-    private string editHeader { get; set; } = "New Doctor";
+    private string editHeader { get; set; } = "Novi auditor";
 
     private List<TextIdData> experienceData { get; set; }
 
@@ -226,7 +226,7 @@ else
 
     private void onAddDoctor(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
     {
-        doctorEditModel = new Doctor { Name = null, Gender = "Male", Mobile = null, Email = null, Education = null, Designation = null };
+        doctorEditModel = new Doctor { Name = null, Gender = "Muški", Mobile = null, Email = null, Education = null, Designation = null };
         this.isShowNewDialog = true;
     }
 
@@ -250,7 +250,7 @@ else
             filteredDoctors = Service.Doctors.Where(i => i.Specialization.Equals(specObj.Value)).ToList();
         }
         string message = $"{newDoctor.Name}, {newDoctor.Specialization.Substring(0, 1).ToUpper()}{newDoctor.Specialization.Substring(1)}";
-        Service.Activities.Insert(0, new Activity { Name = "Added New Doctor", Message = message, Time = "4 mins ago", Type = "doctor", ActivityTime = DateTime.Now });
+        Service.Activities.Insert(0, new Activity { Name = "Dodan je novi auditor", Message = message, Time = "4 mins ago", Type = "auditor", ActivityTime = DateTime.Now });
         await DialogObj.Hide();
     }
 

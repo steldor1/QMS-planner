@@ -8,7 +8,7 @@
 @if (isDataLoaded)
 {
 <div class="deleted-msg">
-    <SfMessage Severity="MessageSeverity.Success" Visible=@showDeleteMsg>The Patient's details have been deleted successfully.</SfMessage>
+    <SfMessage Severity="MessageSeverity.Success" Visible=@showDeleteMsg>Detalji klijenta su obrisani iz sustava.</SfMessage>
 </div>
 <div id="patients" class="planner-patient-wrapper">
     <header>
@@ -51,7 +51,7 @@
                     <GridColumn Field=@nameof(Patient.Gender) HeaderText="Tip društva" TextAlign="@TextAlign.Left" Width="80"></GridColumn>
                     <GridColumn Field=@nameof(Patient.BloodGroup) HeaderText="Djelatnost" TextAlign="@TextAlign.Left" Width="100"></GridColumn>
                     <GridColumn Field=@nameof(Patient.Symptoms) HeaderText="Osnovni podaci" TextAlign="@TextAlign.Left" Width="150"></GridColumn>
-                    <GridColumn Field=@nameof(Patient.Mobile) HeaderText="Mobile Number" TextAlign="@TextAlign.Left" Width="100"></GridColumn>
+                    <GridColumn Field=@nameof(Patient.Mobile) HeaderText="Mobilni broj" TextAlign="@TextAlign.Left" Width="100"></GridColumn>
                     <GridColumn Field=@nameof(Patient.Email) HeaderText="Email" TextAlign="@TextAlign.Left" Width="120"></GridColumn>
                 </GridColumns>
             </SfGrid>
@@ -67,28 +67,28 @@
         <Content>
             <div class="grid-edit-dialog">
                 <div class="field-row">
-                    <label> Patient Id </label><span id="Id">@((activePatientData as Patient).Id)</span>
+                    <label> ID klijenta </label><span id="Id">@((activePatientData as Patient).Id)</span>
                 </div>
                 <div class="field-row">
-                    <label> Patient Name </label><span id="Name">@((activePatientData as Patient).Name)</span>
+                    <label> Naziv klijenta </label><span id="Name">@((activePatientData as Patient).Name)</span>
                 </div>
                 <div class="field-row">
-                    <label> Gender </label><span id="Gender">@((activePatientData as Patient).Gender)</span>
+                    <label> Spol </label><span id="Spol">@((activePatientData as Patient).Gender)</span>
                 </div>
                 <div class="field-row">
-                    <label> DOB </label><span id="DOB">@((activePatientData as Patient).DOB)</span>
+                    <label> Počtak rada </label><span id="DOB">@((activePatientData as Patient).DOB)</span>
                 </div>
                 <div class="field-row">
-                    <label> Blood Group </label><span id="BloodGroup">@((activePatientData as Patient).BloodGroup)</span>
+                    <label> Djelatnost </label><span id="BloodGroup">@((activePatientData as Patient).BloodGroup)</span>
                 </div>
                 <div class="field-row">
-                    <label> Mobile Number </label><span id="Mobile">@((activePatientData as Patient).Mobile)</span>
+                    <label> Mobilni broj </label><span id="Mobile">@((activePatientData as Patient).Mobile)</span>
                 </div>
                 <div class="field-row">
                     <label> Email </label><span id="Email">@((activePatientData as Patient).Email)</span>
                 </div>
                 <div class="field-row">
-                    <label> Symptoms </label><span id="Symptoms">@((activePatientData as Patient).Symptoms)</span>
+                    <label> Napomene </label><span id="Symptoms">@((activePatientData as Patient).Symptoms)</span>
                 </div>
                 <div class="field-row history-row">
                     <label>Appointment History</label>
@@ -119,29 +119,29 @@
         <EditForm Model="@patientEditModel" OnValidSubmit="@HandleValidSubmit">
             <DataAnnotationsValidator></DataAnnotationsValidator>
             <div class="field-container name-container">
-                <SfTextBox CssClass="patient-name e-field" Placeholder="Patient Name" FloatLabelType="@FloatLabelType.Always" @bind-Value="@patientEditModel.Name"></SfTextBox>
+                <SfTextBox CssClass="patient-name e-field" Placeholder="Naziv klijenta" FloatLabelType="@FloatLabelType.Always" @bind-Value="@patientEditModel.Name"></SfTextBox>
                 <ValidationMessage For="@(() => patientEditModel.Name)" />
             </div>
             <div class="field-container gender-container">
                 <div class="gender">
-                    <div><label>Gender</label></div>
+                    <div><label>Spol</label></div>
                     <div class="e-btn-group e-round-corner e-field">
-                        <SfRadioButton Label="d.o.o." Name="Gender" Value="d.o.o." @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
-                        <SfRadioButton Label="d.d." Name="Gender" Value="d.d." @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
+                        <SfRadioButton Label="d.o.o." Name="Tip društva" Value="d.o.o." @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
+                                <SfRadioButton Label="d.d." Name="Tip društva" Value="d.d." @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
                     </div>
                 </div>
                 <div class="dob">
-                    <SfDatePicker ID="DOB" CssClass="e-field" Placeholder="DOB" @bind-Value="@patientEditModel.DOB" Max="DateTime.Now" FloatLabelType="@FloatLabelType.Always" ShowClearButton="false"></SfDatePicker>
+                    <SfDatePicker ID="DOB" CssClass="e-field" Placeholder="Početak rada" @bind-Value="@patientEditModel.DOB" Max="DateTime.Now" FloatLabelType="@FloatLabelType.Always" ShowClearButton="false"></SfDatePicker>
                     <ValidationMessage For="@(() => patientEditModel.DOB)" />
                 </div>
             </div>
             <div class="field-container contact-container">
                 <div class="mobile" style="width:345px">
-                    <SfMaskedTextBox CssClass="e-field" @ref="maskObj" Placeholder="Mobile Number" FloatLabelType="@FloatLabelType.Always" @bind-Value="@patientEditModel.Mobile" Mask="(999) 999-9999"></SfMaskedTextBox>
+                    <SfMaskedTextBox CssClass="e-field" @ref="maskObj" Placeholder="Mobilni broj" FloatLabelType="@FloatLabelType.Always" @bind-Value="@patientEditModel.Mobile" Mask="(999) 999-9999"></SfMaskedTextBox>
                     <ValidationMessage For="@(() => patientEditModel.Mobile)" />
                 </div>
                 <div class="blood-group">
-                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" CssClass="e-field" Placeholder="Blood Group" @bind-Value="@patientEditModel.BloodGroup" DataSource="@bloodGroupData">
+                    <SfDropDownList FloatLabelType="@FloatLabelType.Always" CssClass="e-field" Placeholder="Djelatnost" @bind-Value="@patientEditModel.BloodGroup" DataSource="@bloodGroupData">
                         <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
                     </SfDropDownList>
                     <ValidationMessage For="@(() => patientEditModel.BloodGroup)" />
@@ -152,7 +152,7 @@
                 <ValidationMessage For="@(() => patientEditModel.Email)" />
             </div>
             <div class="field-container symptom-container">
-                <SfTextBox CssClass="e-field" Placeholder="Symptoms" FloatLabelType="@FloatLabelType.Always" @bind-Value="@patientEditModel.Symptoms"></SfTextBox>
+                <SfTextBox CssClass="e-field" Placeholder="Napomene" FloatLabelType="@FloatLabelType.Always" @bind-Value="@patientEditModel.Symptoms"></SfTextBox>
                 <ValidationMessage For="@(() => patientEditModel.Symptoms)" />
             </div>
             <div class="e-footer-content">
