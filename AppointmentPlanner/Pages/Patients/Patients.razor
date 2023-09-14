@@ -144,7 +144,7 @@
                     <SfDropDownList FloatLabelType="@FloatLabelType.Always" CssClass="e-field" Placeholder="Djelatnost" @bind-Value="@patientEditModel.BloodGroup" DataSource="@bloodGroupData">
                         <DropDownListFieldSettings Text="Text" Value="Value"></DropDownListFieldSettings>
                     </SfDropDownList>
-                    <ValidationMessage For="@(() => patientEditModel.BloodGroup)" />
+                    @* <ValidationMessage For="@(() => patientEditModel.BloodGroup)" />  *@
                 </div>
             </div>
             <div class="field-container email-container">
