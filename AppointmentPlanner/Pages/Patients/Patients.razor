@@ -73,10 +73,10 @@
                     <label> Naziv klijenta </label><span id="Name">@((activePatientData as Patient).Name)</span>
                 </div>
                 <div class="field-row">
-                    <label> Spol </label><span id="Spol">@((activePatientData as Patient).Gender)</span>
+                            <label> Tip organizacije </label><span id="Tip organizacije">@((activePatientData as Patient).Gender)</span>
                 </div>
                 <div class="field-row">
-                    <label> Počtak rada </label><span id="DOB">@((activePatientData as Patient).DOB)</span>
+                    <label> Početak rada </label><span id="DOB">@((activePatientData as Patient).DOB)</span>
                 </div>
                 <div class="field-row">
                     <label> Djelatnost </label><span id="BloodGroup">@((activePatientData as Patient).BloodGroup)</span>
@@ -124,7 +124,7 @@
             </div>
             <div class="field-container gender-container">
                 <div class="gender">
-                    <div><label>Spol</label></div>
+                    <div><label>Tip društva</label></div>
                     <div class="e-btn-group e-round-corner e-field">
                         <SfRadioButton Label="d.o.o." Name="Tip društva" Value="d.o.o." @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
                                 <SfRadioButton Label="d.d." Name="Tip društva" Value="d.d." @bind-Checked="@patientEditModel.Gender"></SfRadioButton>
