@@ -163,7 +163,7 @@ else{
 
     protected override void OnInitialized()
     {
-        sceduleView = (View)Enum.Parse(typeof(View), (Service.CalendarSettings.CurrentView as string));
+        sceduleView = View.Month; @* (View)Enum.Parse(typeof(View), (Service.CalendarSettings.CurrentView as string)); *@
         currentDate = Service.StartDate;
         this.viewInterval = Service.CalendarSettings.Interval;
         this.calendarDayOfWeek = Service.CalendarSettings.FirstDayOfWeek;

@@ -216,7 +216,7 @@ else
     private bool IsShowPatientEditDialog { get; set; } = false;
     private bool showGridEditDialog { get; set; } = false;
     private string patientHeader { get; set; }
-    private string gridEditHeader { get; set; } = "Patient Details";
+    private string gridEditHeader { get; set; } = "Detalji klijenta";
 
     private List<TextValueData> bloodGroupData { get; set; }
 
@@ -292,7 +292,7 @@ else
 
     private async void onDeleteClick()
     {
-        bool isConfirm = await DialogService.ConfirmAsync("Are you sure you want to delete this patient?", "Patient Details", new DialogOptions()
+        bool isConfirm = await DialogService.ConfirmAsync("Jeste li sigurni da želite obrisati klijenta?", "Detalji klijenta", new DialogOptions()
         {
             ShowCloseIcon =true,
         });
